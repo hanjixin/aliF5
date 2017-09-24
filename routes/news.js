@@ -16,7 +16,7 @@ router.get('/publish', function(req, res, next) {
     mongoDB.CON(function (arr,db) {
         DBMan.insertData(db,function () {
             var collection = db.collection('news');
-            var data=[{userName:req.query.username,time:new Date().getTime(),headUrl:"http://ovre0qmr5.bkt.clouddn.com/21a7b687514832c5a6df7e350e00374b.jpg",artical:req.query.arctical,imgUrl:""}]
+            var data=[{userName:req.query.username,time:new Date().getTime(),headUrl:"http://ovre0qmr5.bkt.clouddn.com/21a7b687514832c5a6df7e350e00374b.jpg",artical:req.query.artical,imgUrl:""}]
             collection.insert(data, function(err, result) {
 
                 if (err) {
